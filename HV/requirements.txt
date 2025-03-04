@@ -1,0 +1,22 @@
+# Dependencias principales
+Flask==2.0.1
+Werkzeug==2.0.1
+Pillow==9.0.0
+numpy==1.21.4
+
+# TensorFlow y Keras
+tensorflow==2.8.0
+keras==2.8.0
+
+# PyTorch
+torch==1.10.0
+torchvision==0.11.1
+
+# Utilidades
+requests==2.26.0
+gunicorn==20.1.0
+
+# Procesamiento de imágenes adicional
+scikit-image==0.18.3
+matplotlib==3.5.1
+

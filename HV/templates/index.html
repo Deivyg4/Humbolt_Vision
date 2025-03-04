@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humbolt Vision - Análisis de Imágenes con IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="pulse"></div>
+                </div>
+                <div class="logo-text">
+                    <h1>Humbolt Vision</h1>
+                    <p>Análisis de Imágenes con IA Local</p>
+                </div>
+            </div>
+            <div class="status">
+                <span class="status-dot"></span>
+                Sistema en línea
+            </div>
+        </header>
+        
+        <!-- Contenido Principal -->
+        <main>
+            <div class="chat-container" id="chatContainer">
+                <!-- Los mensajes se añadirán aquí dinámicamente -->
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Bienvenido a Humbolt Vision. Puedes subir una imagen para analizarla con TensorFlow, Keras y PyTorch, o describir el clima para obtener recomendaciones de vestimenta.</p>
+                        <div class="message-info">
+                            <i class="fas fa-brain"></i>
+                            Humbolt Vision
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Área de vista previa de imagen -->
+            <div class="image-preview" id="imagePreview" style="display: none;">
+                <button id="removeImageBtn" class="remove-image-btn">✕</button>
+                <img id="previewImg" src="/placeholder.svg" alt="Vista previa">
+            </div>
+            
+            <!-- Área de entrada -->
+            <form id="messageForm" class="input-area">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <button type="button" id="uploadBtn" class="upload-btn">
+                    <i class="fas fa-upload"></i>
+                </button>
+                <input type="text" id="messageInput" placeholder="Escribe tu mensaje o sube una imagen...">
+                <button type="submit" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
